@@ -43,11 +43,11 @@ module.exports = {
         if (array.length == 1 && array[0] != target) return -1;
 
         if (target < current) {
-            return this.functional(target, array.slice(0, middle));
+            return this.recursive(target, array.slice(0, middle));
         }
         if (target > current) {
             var shift = middle + 1;
-            var ret = this.functional(target, array.slice(shift));
+            var ret = this.recursive(target, array.slice(shift));
             return ret > -1 ? shift + ret : ret;
         }
         return middle;

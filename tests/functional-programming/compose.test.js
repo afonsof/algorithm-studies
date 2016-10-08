@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var compose = require('../functional-programming/compose');
+var compose = require('../../functional-programming/compose');
 
 describe('compose', () => {
     it('composes functions', () => {

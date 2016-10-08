@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var curry = require('../functional-programming/curry');
+var curry = require('../../functional-programming/curry');
 
 describe('curry', () => {
     it('returns the curried function', () => {
