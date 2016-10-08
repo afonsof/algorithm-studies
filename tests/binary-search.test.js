@@ -1,8 +1,8 @@
 var assert = require('chai').assert;
 var binarySearch = require('../search/binary-search');
 
-describe('binarySearch', function () {
-    it('Iterative', function () {
+describe('binary-search', function () {
+    it('iterative', function () {
         assert.equal(binarySearch.iterative(3, []), -1);
         assert.equal(binarySearch.iterative(3, [1]), -1);
         assert.equal(binarySearch.iterative(1, [1]), 0);
@@ -22,8 +22,9 @@ describe('binarySearch', function () {
         assert.equal(binarySearch.iterative(4, [1, 3, 5, 7]), -1);
         assert.equal(binarySearch.iterative(6, [1, 3, 5, 7]), -1);
         assert.equal(binarySearch.iterative(8, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.iterative('efg', ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh']), 4);
     });
-    it('Recursive', function () {
+    it('recursive', function () {
         assert.equal(binarySearch.recursive(3, []), -1);
         assert.equal(binarySearch.recursive(3, [1]), -1);
         assert.equal(binarySearch.recursive(1, [1]), 0);
@@ -43,8 +44,9 @@ describe('binarySearch', function () {
         assert.equal(binarySearch.recursive(4, [1, 3, 5, 7]), -1);
         assert.equal(binarySearch.recursive(6, [1, 3, 5, 7]), -1);
         assert.equal(binarySearch.recursive(8, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.recursive('efg', ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh']), 4);
     });
-    it('Functional', function () {
+    it('functional', function () {
         assert.equal(binarySearch.functional(3, []), -1);
         assert.equal(binarySearch.functional(3, [1]), -1);
         assert.equal(binarySearch.functional(1, [1]), 0);
@@ -64,5 +66,6 @@ describe('binarySearch', function () {
         assert.equal(binarySearch.functional(4, [1, 3, 5, 7]), -1);
         assert.equal(binarySearch.functional(6, [1, 3, 5, 7]), -1);
         assert.equal(binarySearch.functional(8, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.functional('efg', ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh']), 4);
     });
 });
