@@ -1,0 +1,68 @@
+var assert = require('chai').assert;
+var binarySearch = require('../search/binary-search');
+
+describe('binarySearch', function () {
+    it('Iterative', function () {
+        assert.equal(binarySearch.iterative(3, []), -1);
+        assert.equal(binarySearch.iterative(3, [1]), -1);
+        assert.equal(binarySearch.iterative(1, [1]), 0);
+        assert.equal(binarySearch.iterative(1, [1, 3, 5]), 0);
+        assert.equal(binarySearch.iterative(3, [1, 3, 5]), 1);
+        assert.equal(binarySearch.iterative(5, [1, 3, 5]), 2);
+        assert.equal(binarySearch.iterative(0, [1, 3, 5]), -1);
+        assert.equal(binarySearch.iterative(2, [1, 3, 5]), -1);
+        assert.equal(binarySearch.iterative(4, [1, 3, 5]), -1);
+        assert.equal(binarySearch.iterative(6, [1, 3, 5]), -1);
+        assert.equal(binarySearch.iterative(1, [1, 3, 5, 7]), 0);
+        assert.equal(binarySearch.iterative(3, [1, 3, 5, 7]), 1);
+        assert.equal(binarySearch.iterative(5, [1, 3, 5, 7]), 2);
+        assert.equal(binarySearch.iterative(7, [1, 3, 5, 7]), 3);
+        assert.equal(binarySearch.iterative(0, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.iterative(2, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.iterative(4, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.iterative(6, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.iterative(8, [1, 3, 5, 7]), -1);
+    });
+    it('Recursive', function () {
+        assert.equal(binarySearch.recursive(3, []), -1);
+        assert.equal(binarySearch.recursive(3, [1]), -1);
+        assert.equal(binarySearch.recursive(1, [1]), 0);
+        assert.equal(binarySearch.recursive(1, [1, 3, 5]), 0);
+        assert.equal(binarySearch.recursive(3, [1, 3, 5]), 1);
+        assert.equal(binarySearch.recursive(5, [1, 3, 5]), 2);
+        assert.equal(binarySearch.recursive(0, [1, 3, 5]), -1);
+        assert.equal(binarySearch.recursive(2, [1, 3, 5]), -1);
+        assert.equal(binarySearch.recursive(4, [1, 3, 5]), -1);
+        assert.equal(binarySearch.recursive(6, [1, 3, 5]), -1);
+        assert.equal(binarySearch.recursive(1, [1, 3, 5, 7]), 0);
+        assert.equal(binarySearch.recursive(3, [1, 3, 5, 7]), 1);
+        assert.equal(binarySearch.recursive(5, [1, 3, 5, 7]), 2);
+        assert.equal(binarySearch.recursive(7, [1, 3, 5, 7]), 3);
+        assert.equal(binarySearch.recursive(0, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.recursive(2, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.recursive(4, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.recursive(6, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.recursive(8, [1, 3, 5, 7]), -1);
+    });
+    it('Functional', function () {
+        assert.equal(binarySearch.functional(3, []), -1);
+        assert.equal(binarySearch.functional(3, [1]), -1);
+        assert.equal(binarySearch.functional(1, [1]), 0);
+        assert.equal(binarySearch.functional(1, [1, 3, 5]), 0);
+        assert.equal(binarySearch.functional(3, [1, 3, 5]), 1);
+        assert.equal(binarySearch.functional(5, [1, 3, 5]), 2);
+        assert.equal(binarySearch.functional(0, [1, 3, 5]), -1);
+        assert.equal(binarySearch.functional(2, [1, 3, 5]), -1);
+        assert.equal(binarySearch.functional(4, [1, 3, 5]), -1);
+        assert.equal(binarySearch.functional(6, [1, 3, 5]), -1);
+        assert.equal(binarySearch.functional(1, [1, 3, 5, 7]), 0);
+        assert.equal(binarySearch.functional(3, [1, 3, 5, 7]), 1);
+        assert.equal(binarySearch.functional(5, [1, 3, 5, 7]), 2);
+        assert.equal(binarySearch.functional(7, [1, 3, 5, 7]), 3);
+        assert.equal(binarySearch.functional(0, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.functional(2, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.functional(4, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.functional(6, [1, 3, 5, 7]), -1);
+        assert.equal(binarySearch.functional(8, [1, 3, 5, 7]), -1);
+    });
+});
