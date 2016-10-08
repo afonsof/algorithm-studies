@@ -1,4 +1,4 @@
-var utils = require('../../utils');
+var utils = require('../utils');
 //---------------------------------------------------
 // Como exemplo podemos ter o bubble sort
 // O(N^2) Time to complete will be proportional to

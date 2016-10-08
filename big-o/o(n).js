@@ -1,4 +1,4 @@
-var utils = require('../../utils');
+var utils = require('../utils');
 //---------------------------------------------------
 // 0(N) An algorithm thats time to complete will
 // grow in direct proportion to the amount of data

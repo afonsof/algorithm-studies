@@ -1,4 +1,4 @@
-var utils = require('../../utils');
+var utils = require('../utils');
 
 //---------------------------------------------------
 // O (log N) Occurs when the data being used is decreased
@@ -23,7 +23,7 @@ function binarySearch(item, array) {
     let count = 0;
 
     while (minIndex <= maxIndex) {
-        currentIndex = (minIndex + maxIndex) / 2 | 0;
+        currentIndex = Math.floor(minIndex + maxIndex);
         currentItem = array[currentIndex];
         if (currentItem < item)
             minIndex = currentIndex + 1;

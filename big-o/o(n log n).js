@@ -1,4 +1,4 @@
-var utils = require('../../utils');
+var utils = require('../utils');
 
 // O (n log n) Most sorts are at least O(N) because
 // every element must be looked at, at least once.
