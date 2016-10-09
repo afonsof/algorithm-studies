@@ -22,5 +22,13 @@ module.exports = {
         if (array[0] === target) return 0;
         let ret = this.recursive(target, array.slice(1));
         return ret == -1 ? ret : 1 + ret;
+    },
+    reduce: function (target, array) {
+        if (array.length === 0) return -1;
+        return array.reduce(function (s, current) {
+            if (s.match == -1 && current == target) s.match = s.pos;
+            s.pos++;
+            return s;
+        }, {pos: 0, match: -1}).match;
     }
 };

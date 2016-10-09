@@ -28,11 +28,11 @@ module.exports = {
         let current = array[middle];
 
         if (target < current) {
-            return this.recursive(target, array, min, middle - 1)
+            return this.recursive(target, array, min, middle - 1);
         }
 
         if (target > current) {
-            return this.recursive(target, array, middle + 1, max)
+            return this.recursive(target, array, middle + 1, max);
         }
         return middle;
     },
